@@ -1,0 +1,209 @@
+<!-- <div>
+<p class="font-weight-bold">Bold text.</p>
+
+
+<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p> -->
+
+
+</div>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    .navbarcolor{
+        background: linear-gradient(to right, rgba(127, 124, 124, 0.541), rgba(72, 72, 72, 0.619), rgba(41, 40, 40, 0.737));
+        border-radius: 10px;
+    }
+    body {
+        
+        background-color: aliceblue;
+        
+      }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top bg-body-tertiary navbarcolor">
+
+        <a class="navbar-brand" href="{%url 'index' %}">Home</a>
+  
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- This is the actual code that creates the "hamburger icon" -->
+        <!-- The data-target grabs ids to put into the icon -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+  
+        <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-nav">
+  
+            <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+            <a class="nav-item nav-link active" href="{%url 'home'%}">Diabetes <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'home_two' %}">Heart</a>
+            {% csrf_token %}
+            
+            
+  
+            <!-- DROPDOWN MENU -->
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+                <a class="dropdown-item" href="{% url 'feedbackForm' %}">Feedback</a>
+                {% csrf_token %}
+                <a class="dropdown-item" href="{% url 'rating' %}">Rating</a>
+                
+  
+                <!-- Use this to separate a new link: -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'remediesD' %}">Remedies For Diabetes</a>
+                <a class="dropdown-item" href="{% url 'remediesH' %}">Remedies For Heart Problems</a>
+              </div>
+            </div>
+  
+            
+  
+          </div> <!-- /.navbar-nav, left-hand content -->
+  
+          <!-- STUFF ON THE RIGHT -->
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="{%url 'about' %}">About</a>
+          </div> <!-- /.navbar-nav, right-hand content -->
+  
+        </div> <!-- /.navbar-collapse -->
+      </nav>
+      <br>
+
+<div class="container">
+<h1>Heart disease</h1>
+<p class="text-justify">Your health care provider will examine you and ask about your personal and family medical history.
+
+    Many different tests are used to diagnose heart disease. Besides blood tests and a chest X-ray, tests to diagnose heart disease can include:</p>
+
+    <h2>Electrocardiogram (ECG or EKG).</h2>
+
+<p class="text-justify">An ECG is a quick and painless test that records the electrical signals in the heart. It can tell if the heart is beating too fast or too slowly.</p>
+
+
+<h2>Holter monitoring</h2>
+
+<p class="text-justify">A Holter monitor is a portable ECG device that's worn for a day or more to record the heart's activity during daily activities. This test can detect irregular heartbeats that aren't found during a regular ECG exam.</p>
+
+<h2>Echocardiogram.</h2>
+
+<p class="text-justify">This noninvasive exam uses sound waves to create detailed images of the heart in motion. It shows how blood moves through the heart and heart valves. An echocardiogram can help determine if a valve is narrowed or leaking.</p>
+
+<h2>Exercise tests or stress tests.</h2>
+
+<p class="text-justify">These tests often involve walking on a treadmill or riding a stationary bike while the heart is monitored. Exercise tests help reveal how the heart responds to physical activity and whether heart disease symptoms occur during exercise. If you can't exercise, you might be given medications.</p>
+
+
+<h2>Cardiac catheterization.</h2>
+
+<p class="text-justify">This test can show blockages in the heart arteries. A long, thin flexible tube (catheter) is inserted in a blood vessel, usually in the groin or wrist, and guided to the heart. Dye flows through the catheter to arteries in the heart. The dye helps the arteries show up more clearly on X-ray images taken during the test.</p>
+
+
+
+<h2>Heart (cardiac) CT scan.</h2>
+
+
+<p class="text-justify">n a cardiac CT scan, you lie on a table inside a doughnut-shaped machine. An X-ray tube inside the machine rotates around your body and collects images of your heart and chest.</p>
+
+
+
+<h1>Heart (cardiac) magnetic resonance imaging (MRI) scan</h1>
+
+
+<p class="text-justify">A cardiac MRI uses a magnetic field and computer-generated radio waves to create detailed images of the heart.</p>
+
+
+
+
+<h1>Treatment</h1>
+
+
+
+<p class="text-justify">Heart disease treatment depends on the cause and type of heart damage. Healthy lifestyle habits — such as eating a low-fat, low-salt diet, getting regular exercise and good sleep, and not smoking — are an important part of treatment.</p>
+
+
+<h2>Medications</h2>
+
+<p class="text-justify">If lifestyle changes alone don't work, medications may be needed to control heart disease symptoms and to prevent complications. The type of medication used depends on the type of heart disease.</p>
+
+
+
+<h2>Surgery or other procedures</h2>
+
+
+<p class="text-justify">Some people with heart disease may need a procedure or surgery. The type of procedure or surgery will depend on the type of heart disease and the amount of damage to the heart.</p>
+
+
+<h1>Lifestyle and home remedies</h1>
+
+
+<p class="text-justify">Heart disease can be improved — or even prevented — by making certain lifestyle changes. The following changes are recommended to improve heart health:</p>
+
+
+<h2></h2>
+
+<p class="text-justify"> <strong>• Don't smoke.</strong>Smoking is a major risk factor for heart disease, especially atherosclerosis. Quitting is the best way to reduce the risk of heart disease and its complications. If you need help quitting, talk to your provider.</p>
+
+
+
+
+<p class="text-justify"> <strong>• Control blood pressure.</strong> Uncontrolled high blood pressure increases the risk of serious health problems. Get your blood pressure checked at least every two years if you're 18 and older. If you have risk factors for heart disease or are over age 40, you may need more-frequent checks. Ask your health care provider what blood pressure reading is best for you.</p>
+
+
+
+
+<p class="text-justify"> <strong>• Get a cholesterol test. </strong> Ask your provider for a baseline cholesterol test when you're in your 20s and then at least every 4 to 6 years. You may need to start testing earlier if high cholesterol is in your family. You may need more-frequent checks if your test results aren't in a desirable range or you have risk factors for heart disease.</p>
+
+
+
+<p class="text-justify"> <strong>• Manage diabetes.</strong> If you have diabetes, tight blood sugar control can help reduce the risk of heart disease.</p>
+
+
+
+
+<p class="text-justify"> <strong>• Exercise.</strong>Physical activity helps you achieve and maintain a healthy weight. Regular exercise helps control diabetes, high cholesterol and high blood pressure — all risk factors for heart disease. With your provider's OK, aim for 30 to 60 minutes of physical activity most days of the week. Talk to your health care provider about the amount and type of exercise that's best for you.</p>
+
+
+
+<p class="text-justify"> <strong>• Maintain a healthy weight. </strong>Being overweight increases the risk of heart disease. Talk with your care provider to set realistic goals for body mass index (BMI) and weight.</p>
+
+
+
+<p class="text-justify"> <strong>• Manage stress.</strong>Find ways to help reduce emotional stress. Getting more exercise, practicing mindfulness and connecting with others in support groups are some ways to reduce and manage stress. If you have anxiety or depression, talk to your provider about strategies to help.</p>
+
+
+
+<p class="text-justify"> <strong>• Practice good hygiene.</strong>Regularly wash your hands and brush and floss your teeth to keep yourself healthy.</p>
+
+
+
+<p class="text-justify"> <strong>• Practice good sleep habits.</strong>Poor sleep may increase the risk of heart disease and other chronic conditions. Adults should aim to get 7 to 9 hours of sleep daily. Kids often need more. Go to bed and wake at the same time every day, including on weekends. If you have trouble sleeping, talk to your provider about strategies that might help.</p>
+
+
+
+
+
+
+</div>
+
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

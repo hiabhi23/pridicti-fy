@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+          .navbarcolor{
+            background: linear-gradient(to right, rgba(127, 124, 124, 0.541), rgba(72, 72, 72, 0.619), rgba(41, 40, 40, 0.737));
+            border-radius: 10px;
+        }
+        body{
+          background-color: aliceblue;
+        }
+          p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 500px;
+    background: white;
+    border-radius: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 5s box-shadow;
+  }
+  
+  p:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  p:hover::before, p:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  p:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
+  .example_b {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #424444;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    width:400px;
+    font-size: 30px;
+    text-align: center;
+    }
+    .example_b:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    
+    transition: all 0.4s ease 0s;
+    }
+    .headings{
+      font-size: 50px;
+      text-align: center;
+      
+    }
+      </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top bg-body-tertiary navbarcolor">
+
+            <a class="navbar-brand" href="{%url 'index' %}">Home</a>
+      
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- This is the actual code that creates the "hamburger icon" -->
+            <!-- The data-target grabs ids to put into the icon -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+      
+            <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div class="navbar-nav">
+      
+                <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+                <a class="nav-item nav-link active" href="{%url 'home'%}">Diabetes <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="{% url 'home_two' %}">Heart</a>
+                {% csrf_token %}
+                
+                
+      
+                <!-- DROPDOWN MENU -->
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'feedbackForm' %}">Feedback</a>
+                    {% csrf_token %}
+                    <a class="dropdown-item" href="{% url 'rating' %}">Rating</a>
+                    
+      
+                    <!-- Use this to separate a new link: -->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'remediesD' %}">Remedies For Diabetes</a>
+                    <a class="dropdown-item" href="{% url 'remediesH' %}">Remedies For Heart Problems</a>
+                  </div>
+                </div>
+      
+                
+      
+              </div> <!-- /.navbar-nav, left-hand content -->
+      
+              <!-- STUFF ON THE RIGHT -->
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="{%url 'about' %}">About</a>
+              </div> <!-- /.navbar-nav, right-hand content -->
+      
+            </div> <!-- /.navbar-collapse -->
+          </nav>
+          <br>
+          <h1 class='headings'>Result Page!!!</h1>
+          <br>
+        <div class="container">
+        <p>
+       
+
+         {{ans}}
+        
+        
+        
+        <a class="example_b" href="{%url 'appointmentH' %}" target="_blank" rel="nofollow noopener">
+          Appointment Page!!!!
+        </a>
+        </p>
+        
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+         
+    </body>
+</html>

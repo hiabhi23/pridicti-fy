@@ -1,0 +1,196 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'rel='nofollow' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .navbarcolor{
+            background: linear-gradient(to right, rgba(127, 124, 124, 0.541), rgba(72, 72, 72, 0.619), rgba(41, 40, 40, 0.737));
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top bg-body-tertiary navbarcolor">
+
+        <a class="navbar-brand" href="{%url 'index' %}">Home</a>
+  
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- This is the actual code that creates the "hamburger icon" -->
+        <!-- The data-target grabs ids to put into the icon -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+  
+        <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-nav">
+  
+            <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+            <a class="nav-item nav-link active" href="{%url 'home'%}">Diabetes <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'home_two' %}">Heart</a>
+            {% csrf_token %}
+            
+            
+  
+            <!-- DROPDOWN MENU -->
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+                <a class="dropdown-item" href="{% url 'feedbackForm' %}">Feedback</a>
+                {% csrf_token %}
+                <a class="dropdown-item" href="{% url 'rating' %}">Rating</a>
+                
+  
+                <!-- Use this to separate a new link: -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'remediesD' %}">Remedies For Diabetes</a>
+                <a class="dropdown-item" href="{% url 'remediesH' %}">Remedies For Heart Problems</a>
+              </div>
+            </div>
+  
+            
+  
+          </div> <!-- /.navbar-nav, left-hand content -->
+  
+          <!-- STUFF ON THE RIGHT -->
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="{%url 'about' %}">About</a>
+          </div> <!-- /.navbar-nav, right-hand content -->
+  
+        </div> <!-- /.navbar-collapse -->
+      </nav>
+      <br>
+
+<div class="container">
+<h1>7 Easy Ways to Lower Blood Sugar Levels Naturally</h1>
+<p class="text-justify">Knowing how to reduce your blood sugar levels naturally is key to managing prediabetes or diabetes. Consider actions such as exercising regularly, eating more fiber, incorporating more snacks, and increasing your probiotic intake.
+
+    High blood sugar, also known as hyperglycemia, is associated with diabetes and prediabetes. Prediabetes is when your blood sugar is high, but not high enough to be classified as diabetes.
+    
+    Your body usually manages your blood sugar levels by producing insulin, a hormone that allows your cells to use the circulating sugar in your blood. As such, insulin is the most important regulator of blood sugar levels (1Trusted Source).
+    
+    However, multiple factors can impair blood sugar management and lead to hyperglycemia.
+    
+    Internal causes for high blood sugar include when your liver produces too much glucose, your body makes too little insulin, or your body can’t effectively use insulin. The latter is known as insulin resistance (1Trusted Source).
+    
+    External factors include dietary choices, certain medications, a sedentary lifestyle, and stress (1Trusted Source, 2Trusted Source).
+    
+    The Centers for Disease Control and Prevention (CDC) reports that 13% of U.S. adults live with diabetes and that another 34.5% have prediabetes. This means that close to 50% of all U.S. adults have diabetes or prediabetes (3Trusted Source).
+    
+    Blood sugar management is especially important for people with diabetes, as chronically high blood sugar levels can lead to limb and life threatening complications (1Trusted Source).
+    
+    Here are 14 easy and evidence-backed ways to naturally lower your blood sugar levels.</p>
+
+    <h1>1. Exercise regularly</h1>
+
+<p class="text-justify">Regular exercise can help you reach and maintain a moderate weight and increase insulin sensitivity (4Trusted Source).</p>
+<p class="text-justify">Increased insulin sensitivity means your cells can more effectively use the available sugar in your bloodstream.</p>
+<p class="text-justify">If you have problems with blood sugar management, consider routinely checking your levels before and after exercising. This will help you learn how you respond to different activities and keep your blood sugar levels from getting too high or low (5).</p>
+<p class="text-justify">What’s more, researchers recommend doing so-called “exercise snacks” to lower blood sugar and prevent the damage that sitting all day can do (6Trusted Source).</p>
+<p class="text-justify">Exercise snacks simply mean that you break up your sitting time every 30 minutes for just a few minutes throughout the day. Some of the recommended exercises include light walking or simple resistance exercises like squats or leg raises.</p>
+<p class="text-justify">Other useful forms of exercise include weightlifting, brisk walking, running, biking, dancing, hiking, swimming, and more. In fact, any activity that regularly gets you up and moving — regardless of the intensity — beats a sedentary lifestyle.</p>
+<p class="text-justify">Plus, know that if you have trouble dedicating longer periods to exercise throughout the week, you can still gain many benefits by doing shorter sessions. For example, try aiming for 10-minute exercise sessions 3 times a day for 5 days, with the goal of 150 minutes per week.</p>
+
+
+
+<h1>2. Manage your carb intake</h1>
+
+
+<p class="text-justify">Your carb intake strongly influences your blood sugar levels</p>
+<p class="text-justify">Your body breaks carbs down into sugars, mainly glucose. Then, insulin helps your body use and store it for energy.</p>
+<p class="text-justify">When you eat too many carbs or have insulin-function problems, this process fails, and blood glucose levels can rise.</p>
+<p class="text-justify">That's why the American Diabetes Association (ADA) recommends that people with diabetes manage their carb intake by counting carbs and being aware of how many they need</p>
+<p class="text-justify">Some studies find that this can help you plan your meals appropriately, further improving blood sugar management</p>
+<p class="text-justify">Many studies also show that eating a low carb diet helps reduce blood sugar levels and prevent blood sugar spikes</p>
+<p class="text-justify">It's important to note that low carb diets and no carb diets are not the same.</p>
+<p class="text-justify">You can still eat some carbs when monitoring your blood sugar. However, prioritizing whole grains over processed ones and refined carbs provides greater nutritional value while helping decrease your blood sugar levels </p>
+
+
+<h1>3. Eat more fiber</h1>
+
+<p class="text-justify">Fiber slows carb digestion and sugar absorption, thereby promoting a more gradual rise in blood sugar levels </p>
+<p class="text-justify">There are two types of fiber — insoluble and soluble.</p>
+<p class="text-justify">While both are important, soluble fiber has explicitly been shown to improve blood sugar management, while insoluble fiber hasn’t been shown to have this effect</p>
+<p class="text-justify">A high fiber diet can improve your body's ability to regulate blood sugar and minimize blood sugar lows. This could help you better manage type 1 diabetes</p>
+<p class="text-justify">Foods that are high in fiber include:</p>
+
+
+<div><p class="text-center">•vegetables</p></div>
+
+<p class="text-justify">•fruits</p>
+<p class="text-justify">•whole grains</p>
+<p class="text-justify">•legumes</p>
+
+
+<h1>3. Eat more fiber</h1>
+
+
+<p class="text-justify">Fiber slows carb digestion and sugar absorption, thereby promoting a more gradual rise in blood sugar levels (</p>
+<p class="text-justify">There are two types of fiber — insoluble and soluble.</p>
+<p class="text-justify">While both are important, soluble fiber has explicitly been shown to improve blood sugar management, while insoluble fiber hasn’t been shown to have this effect</p>
+<p class="text-justify">A high fiber diet can improve your body's ability to regulate blood sugar and minimize blood sugar lows. This could help you better manage type 1 diabetes</p>
+
+<h1>4. Drink water and stay hydrated</h1>
+<p class="text-justify">Drinking enough water could help you keep your blood sugar levels within healthy ranges.</p>
+<p class="text-justify">In addition to preventing dehydration, it helps your kidneys flush out any excess sugar through urine.</p>
+<p class="text-justify">One review of observational studies showed that those who drank more water had a lower risk of developing high blood sugar levels </p>
+
+
+<h1>5. Implement portion control</h1>
+
+<p class="text-justify">Portion control can help you regulate your calorie intake and maintain a moderate weight </p>
+<p class="text-justify">Consequently, weight management promotes healthy blood sugar levels and has been shown to reduce the risk of developing type 2 diabetes </p>
+<p class="text-justify">Monitoring your serving sizes also helps prevent blood sugar spikes </p>
+
+
+<h1>6. Choose foods with a low glycemic index</h1>
+
+<p class="text-justify">The glycemic index (GI) measures how quickly carbs break down during digestion and how rapidly your body absorbs them. This affects how quickly your blood sugar levels rise </p>
+<p class="text-justify">The GI divides foods into low, medium, and high GI and ranks them on a scale of 0-100. Low GI foods have a ranking of 55 or less</p>
+<p class="text-justify">Both the amount and type of carbs you eat determine how a food affects your blood sugar levels. Specifically, eating low GI foods has been shown to reduce blood sugar levels in people with diabetes </p>
+
+<h1>7. Try to manage your stress levels</h1>
+
+<p class="text-justify">Stress can affect your blood sugar levels</p>
+<p class="text-justify">When stressed, your body secretes hormones called glucagon and cortisol, which cause blood sugar levels to rise </p>
+<p class="text-justify">One study including a group of students showed that exercise, relaxation, and meditation significantly reduced stress and lowered blood sugar levels</p>
+<p class="text-justify">Exercises and relaxation methods like yoga and mindfulness-based stress reduction may also help correct insulin secretion problems among people with chronic diabetes</p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+<p class="text-justify"></p>
+
+
+
+
+
+
+
+</div>
+
+
+<script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js” integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

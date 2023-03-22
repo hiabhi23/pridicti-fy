@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    <style>
+      .navbarcolor{
+        background: linear-gradient(to right, rgba(127, 124, 124, 0.541), rgba(72, 72, 72, 0.619), rgba(41, 40, 40, 0.737));
+        border-radius: 10px;
+    }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #696969;
+        color: white;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #555;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      } 
+
+
+      
+    </style>
+</head>
+<body >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top bg-body-tertiary navbarcolor">
+
+    <a class="navbar-brand" href="{%url 'index' %}">Home</a>
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- This is the actual code that creates the "hamburger icon" -->
+    <!-- The data-target grabs ids to put into the icon -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-nav">
+
+        <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+        <a class="nav-item nav-link active" href="{%url 'home'%}">Diabetes <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'home_two' %}">Heart</a>
+        {% csrf_token %}
+        
+        
+
+        <!-- DROPDOWN MENU -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+            <a class="dropdown-item" href="{% url 'feedbackForm' %}">Feedback</a>
+            {% csrf_token %}
+            <a class="dropdown-item" href="{% url 'rating' %}">Rating</a>
+            
+
+            <!-- Use this to separate a new link: -->
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'remediesD' %}">Remedies For Diabetes</a>
+            <a class="dropdown-item" href="{% url 'remediesH' %}">Remedies For Heart Problems</a>
+          </div>
+        </div>
+
+        
+
+      </div> <!-- /.navbar-nav, left-hand content -->
+
+      <!-- STUFF ON THE RIGHT -->
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="{%url 'about' %}">About</a>
+      </div> <!-- /.navbar-nav, right-hand content -->
+
+    </div> <!-- /.navbar-collapse -->
+  </nav>
+  <br>
+  <div class="container" >
+  <div class=" about-section">
+    <h1>About Us Page</h1>
+    <p>AI technologies are now widely used in variety of fields to aid knowledge acquisition & decision making. 
+      Nowadays, there are an increasing number of medical and healthcare-related items available through mobile and online applications. 
+      Study's finds that these AI applications can deliver useful hints or even pre-diagnose advice based on relatively simple facts, such as condition and symptom relational databases. 
+      Moreover, the majority of the work lacks a straightforward framework for maintaining data and applying ML algorithms on trustworthy data. 
+    </p><p>Now a days as we can see that diseases are spreading very fast & new diseases are also developing at equal rate, so it is need of hour to get a technology based disease prediction system. 
+This can be used by patients as well as Doctors, as it will be easy for both, as doctors will get a rough idea about the possible sickness through ML applied in this system similarly the patients will get diagnosis & remedies at home itself. 
+The purpose of the project is to provide a self-test to the patient, if hospitals are not available in near places &Patient can get appropriate suggestions to his problem.Also generates a report regarding patient's health condition.
+</p>
+    <p>That report may contain patient disease name, his symptoms intensity level and the suggestion provided by system. 
+      The goal of any system development is to develop and implement the system cost effectively; user-friendly. 
+      This suggestion may be in the two forms. First suggestion may be appropriate medicine based on symptom intensity level; second suggestion may be a specialized doctor meeting that means in his disease may be in critical state. 
+      The first step in system development life cycle is the identification of need of change to improve or enhance an existing system. 
+      </p>
+  </div>
+  
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/202-MohammadAreeb/PollutionAwareness/main/mohammadAreebpic.jpg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>MOHAMMAD AREEB</h2>
+          <p class="title">Backend,Deployment,Frontend</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>areeb.syed2225@gmail.com</p>
+          <p>
+            <a href="https://www.linkedin.com/in/mohammad-areeb-8050a6222/">
+            <button class="button">linkedin</button>
+          </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Mike Ross</h2>
+          <p class="title">Art Director</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>mike@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+        <div class="container">
+          <h2>MOHAMMAD AREEB</h2>
+          <p class="title">Backend,Deployment,Frontend</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>areeb.syed2225@gmail.com</p>
+          <p><button class="button">Linkdln</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
